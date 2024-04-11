@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap");
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  /*子要素をflexboxにする*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eea73ce5;
+  color: white;
+  font-family: "Kiwi Maru";
+}
+
+.clock {
+  width: 100%; /* 必要に応じて調整 */
+  text-align: center;
+  font-size: 60px;
+  letter-spacing: 3px;
+}
+
+#greeting {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+.leaf {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(200, 136, 17); /* ここを画像やSVGに変更しても良い */
+  opacity: 0.8;
+}
+
+@keyframes fall {
+  0% {
+    top: -10%;
+    transform: translateX(0) rotate(0deg);
+  }
+  100% {
+    top: 90%;
+    transform: translateX(100px) rotate(360deg); /* 落ちる距離と回転を調整 */
+  }
+}
+
+#leaf1 {
+  animation: fall 10s infinite;
+  animation-delay: 0s;
+}
+
+#leaf2 {
+  animation: fall 8s infinite;
+  animation-delay: 2s; /* アニメーションの開始をずらす */
+}
+
+#leaf3 {
+  animation: fall 12s infinite;
+  animation-delay: 4s;
+}
